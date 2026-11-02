@@ -1,0 +1,76 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Comments - My Django Blog</title>
+
+    <link rel="stylesheet"
+          href="{% static 'comments/style.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Comments Section</h1>
+        <p>Share your thoughts with us!</p>
+    </header>
+
+    <nav>
+        <a href="/">Blog Home</a>
+        <a href="/comments/">Comments</a>
+    </nav>
+
+    <main>
+
+        <section class="comment-form">
+            <h2>Leave a Comment</h2>
+
+            <form id="commentForm">
+                <label for="username">Your Name:</label>
+                <input type="text"
+                       id="username"
+                       name="username"
+                       placeholder="Enter your name"
+                       required>
+
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment"
+                          name="comment"
+                          rows="4"
+                          placeholder="Write your comment..."
+                          required></textarea>
+
+                <button type="submit">
+                    Submit Comment
+                </button>
+            </form>
+        </section>
+
+        <section class="comments-list">
+            <h2>Recent Comments</h2>
+
+            <article class="comment">
+                <h3>Alex</h3>
+                <p>Great blog! Looking forward to more posts.</p>
+            </article>
+
+            <article class="comment">
+                <h3>Sarah</h3>
+                <p>This Django tutorial is really helpful!</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>My Django Blog - 2026</p>
+    </footer>
+
+</body>
+</html>
